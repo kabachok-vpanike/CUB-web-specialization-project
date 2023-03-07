@@ -1,0 +1,194 @@
+.boxcontent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 400px;
+    width: 1000px;
+    display: flex;
+    margin: 0;
+    font-family: ABeeZee;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.topPanel {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    background-color: rgb(169, 240, 176);
+    margin-left: auto;
+    margin-right: 0;
+}
+
+
+.topPanel .logo {
+    line-height: 0px;
+    height: 60px;
+    font-size: 25px;
+    background-color: rgb(124, 99, 84);
+    width: 250px;
+    text-align: center;
+
+}
+
+.topPanel .rightButtons input[type=button] {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 20px;
+    font-family: ABeeZee;
+    font-size: 18px;
+    background-color: rgb(124, 99, 84);
+    border: none;
+    color: rgb(169, 240, 176);
+    text-align: center;
+    line-height: 0px;
+    width: 160px;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+
+
+}
+
+.topPanel .rightButtons input[type=button]:active {
+    opacity: 2;
+    background-color: rgb(207, 255, 199);
+    transition: 0.2s;
+
+}
+
+.rectangle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 500px;
+    width: 1100px;
+    margin: 0;
+    background-color: rgb(169, 240, 176);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+.rectangleBack {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    height: 600px;
+    width: 1100px;
+    margin: 0;
+    background-color: rgb(124, 99, 84);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+.boxcontent .textcontent {
+
+    width: 65%;
+    font-size: 18px;
+}
+
+.boxcontent .textcontent .tasktext {
+
+    min-height: 65%;
+    font-size: 18px;
+}
+
+
+.boxcontent .sendanswer {
+    width: 100%;
+    height: 25%;
+
+}
+
+.boxcontent .sendanswer input[type=text] {
+    height: 30px;
+    width: 350px;
+    font-family: ABeeZee;
+    font-size: 20px;
+    border: none;
+    background-color: rgb(207, 255, 199);
+}
+
+.boxcontent .sendanswer input[type=button] {
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+    font-family: ABeeZee;
+    background-color: rgb(124, 99, 84);
+    color: rgb(169, 240, 176);
+    border: none;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+}
+
+.boxcontent .sendanswer input[type=button]:active {
+    opacity: 2;
+    background-color: rgb(207, 255, 199);
+    transition: 0.2s;
+
+}
+
+.boxcontent .rightbuttons {
+    width: 25%;
+    top: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+
+}
+
+.boxcontent .rightbuttons input[type=button] {
+    margin: 8px 0;
+    padding: 20px;
+    font-family: ABeeZee;
+    font-size: 30px;
+    background-color: rgb(124, 99, 84);
+    border: none;
+    color: rgb(169, 240, 176);
+    text-align: right;
+    text-align: right;
+    line-height: 90px;
+    height: 90px;
+    width: 400px;
+
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+
+
+}
+
+.boxcontent .rightbuttons input[type=button]:hover::after {
+    transition: 0.5s;
+    width: 400px;
+
+}
+
+.boxcontent .rightbuttons input[type=button]:hover {
+    width: 450px;
+    transition: 0.5s;
+
+}
+
+.boxcontent .rightbuttons input[type=button]:active {
+    transition: 0.2s;
+    background-color: rgb(207, 255, 199);
+
+}
+
+
+
+
+.boxcontent .textcontent .sendanswer {
+    margin-top: 20px;
+}
+
+body {
+    background-image: url("habackground.png");
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-size: cover;
+}
