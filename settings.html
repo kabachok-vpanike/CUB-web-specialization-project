@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="settingsStyle.css">
+    <title>Settings</title>
+    <script src="settings.js"></script>
+</head>
+
+<body>
+    <div class="rectangleBack" id="rectangleBack"></div>
+    <div class="rectangle" id="rectangle">
+        <div class="optionButtons">
+            <input type="button" value="Difficulty level" id="1">
+            <input type="button" value="Visuals" id="2">
+            <input type="button" value="Language" id="3">
+            <input type="button" value="Timer display" id="4">
+            <input type="button" value="Vocabulary categories" id="5">
+            <input type="button" value="Feedback & progress" id="6">
+            <input type="button" value="Back" id="back" onclick="
+            var rect = document.getElementById('rectangle'); 
+            var rectBack=document.getElementById('rectangleBack');
+            rect.style.top = '0%';
+            rectBack.style.top = '0%';
+            rect.style.opacity = '0';
+            rectBack.style.opacity = '0';
+            setTimeout((doc) => doc.location.href='index.html', 900, document);">
+        </div>
+        <div class="options"></div>
+    </div>
+</body>
+
+</html>

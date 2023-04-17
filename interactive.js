@@ -1,27 +1,16 @@
 const title = "Title of the task";
-const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan mi ut nibh sodales, et tempor nisi efficitur. Aenean porttitor risus quis orci rhoncus facilisis. Quisque enim neque, laoreet vel rhoncus eu, gravida a elit. Fusce consectetur nunc volutpat dui commodo, et scelerisque nulla volutpat. Quisque a ante ante. Nullam blandit ligula eu enim volutpat, dignissim tempor sapien aliquam. Donec vitae nunc nec mi cursus commodo quis at quam. Cras gravida lectus id tortor aliquet convallis. Vestibulum ultrices finibus semper. Nunc nec accumsan arcu, id facilisis nisl. Nam sit amet leo nunc."
-const re = "([a-zA-Z]+)"
+
+
 translateWord = new Map();
 
-window.onload = function () {
-
+function parseTextAndShow(text) {
     var taskTextDiv = document.getElementById("tasktext");
+    taskTextDiv.innerHTML = "";
     taskTextDiv.style.display = "inline-block";
-
-    var textHolder = document.createElement("h8");
-    var taskText = document.createTextNode(text);
-
-    titleArray = [];
-    textArray = [];
-    interactiveTextArray = [];
-    interactiveTitleArray = [];
-    const titleMatches = [...text.matchAll(re)];
-    for (let i = 0; i < titleMatches.length; i++) {
-        var elem = document.createElement('label');
-        elem.innerHTML = titleMatches[i][0];
-        interactiveTitleArray.push(elem);
-        titleArray.push(titleMatches[i][0]);
-    }
+    var title = document.createElement('h1');
+    title.innerHTML = "Task title";
+    taskTextDiv.appendChild(title);
+    const re = "([a-zA-Z]+)"
     const array = [...text.matchAll(re)];
     for (let i = 0; i < array.length; i++) {
         var elem = document.createElement('label');
@@ -66,10 +55,65 @@ window.onload = function () {
         toolTipWrapper.style.transition = "0.4s";
         taskTextDiv.appendChild(toolTipPlusWord);
     }
+}
 
-    // console.log(textArray);
+window.onload = function () {
+    titleArray = [];
+    textArray = [];
+    interactiveTextArray = [];
+    interactiveTitleArray = [];
+    var opt = "textContent" in document.body ? "textContent" : "innerText";
+    const text = document.getElementById("tasktext").getElementsByTagName("h8")[0][opt];
+    console.log(text);
+    parseTextAndShow(text);
 
-    taskTextDiv.appendChild(textHolder);
+    var rect = document.getElementById("rectangle");
+    var rectBack = document.getElementById("rectangleBack");
+    var box = document.getElementById("boxcontent");
+    var answer = document.getElementById("answer");
+
+    rectBack.style.left = "45%";
+    rectBack.style.opacity = "1";
+    rect.style.left = "50%";
+    rect.style.opacity = "1";
+    box.style.left = "50%";
+    box.style.opacity = "1";
+
+
+    const buttons = document.querySelectorAll('input');
+    for (i of buttons) {
+        i.addEventListener('click', buttonAction, false);
+    }
+
+    function buttonAction(button) {
+        if (button.currentTarget.value == "next question") {
+            rect.style.left = "0%";
+            rectBack.style.left = "0%";
+            box.style.left = "0%";
+            rect.style.opacity = "0";
+            rectBack.style.opacity = "0";
+            box.style.opacity = "0";
+        }
+        if (button.currentTarget.value == "translate") {
+            //rect.style.opacity = "0";
+            // rectBack.style.opacity = "0";
+            // box.style.opacity = "0";
+            var tranButt = document.getElementById("translateButton");
+            tranButt.value = "hide translation";
+            box.style.top = "95%";
+            rect.style.top = "95%";
+        }
+        else if (button.currentTarget.value == "hide translation") {
+            var tranButt = document.getElementById("translateButton");
+            tranButt.value = "translate";
+            box.style.top = "50%";
+            rect.style.top = "50%";
+        }
+        if (button.currentTarget.value == "show answer") {
+            answer.style.opacity = "1";
+        }
+        // alert(button.currentTarget.value);
+    }
 
 
 };

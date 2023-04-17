@@ -18,27 +18,68 @@
         </div>
         <div class="rightButtons">
             <input type="button" value="My dictionary">
-            <input type="button" value="Settings">
-            <input type="button" value="Sign In">
+            <input type="button" value="Settings" onclick="
+            var rect = document.getElementById('rectangle'); 
+            var rectBack=document.getElementById('rectangleBack');
+            var box=document.getElementById('boxcontent');
+            rect.style.left = '0%';
+            rectBack.style.left = '0%';
+            box.style.left = '0%';
+            rect.style.opacity = '0';
+            rectBack.style.opacity = '0';
+            box.style.opacity = '0';
+            setTimeout((doc) => doc.location.href='settings.html', 900, document);">
+
+            <input type="button" value="Log In" onclick="
+            var rect = document.getElementById('rectangle'); 
+            var rectBack=document.getElementById('rectangleBack');
+            var box=document.getElementById('boxcontent');
+            rect.style.left = '0%';
+            rectBack.style.left = '0%';
+            box.style.left = '0%';
+            rect.style.opacity = '0';
+            rectBack.style.opacity = '0';
+            box.style.opacity = '0';
+            setTimeout((doc) => doc.location.href='login.html', 900, document);">
         </div>
     </div>
-    <div class="rectangleBack"></div>
-    <div class="rectangle"> </div>
-    <div class="boxcontent">
+    <div class="rectangleBack" id="rectangleBack">
+        <div class="translation" id="translation">
+            <h8>Nulla lorem eros, pretium sed efficitur facilisis, convallis eu est. Donec posuere accumsan dui ut
+                rhoncus. Donec rhoncus erat eget finibus hendrerit. Sed in iaculis ex. Sed sodales neque ac mi congue
+                volutpat id eget lacus. Donec nec rutrum libero, a sollicitudin elit. Nulla facilisi. Sed quis diam
+                enim. Quisque consequat mollis nunc. Nam ac suscipit massa. In nec luctus felis, vel luctus nisi. Morbi
+                ultrices nunc a odio sodales, eu mollis velit pretium.
+            </h8>
+        </div>
+    </div>
+    <div class="rectangle" id="rectangle"> </div>
+    <div class="boxcontent" id="boxcontent">
 
-        <div class="textcontent">
+        <div class="textcontent" id="textcontent">
             <div class="tasktext" id="tasktext">
                 <h1>Title of the task</h1>
-                <h8></h8>
+                <h8>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan mi ut nibh sodales,
+                    et tempor nisi efficitur. Aenean porttitor risus quis orci rhoncus facilisis. Quisque enim neque,
+                    laoreet vel rhoncus eu, gravida a elit. Fusce consectetur nunc volutpat dui commodo, et scelerisque
+                    nulla volutpat. Quisque a ante ante. Nullam blandit ligula eu enim volutpat, dignissim tempor sapien
+                    aliquam. Donec vitae nunc nec mi cursus commodo quis at quam. Cras gravida lectus id tortor aliquet
+                    convallis. Vestibulum ultrices finibus semper. Nunc nec accumsan arcu, id facilisis nisl. Nam sit
+                    amet leo nunc."</h8>
             </div>
             <div class="sendanswer">
                 <input type="text" id="user answer" name="user answer">
                 <input type="button" value="send answer">
             </div>
+            <div class="answer" id="answer">
+                <label>
+                    <h4>answer: ipsum dolor</h4>
+                </label>
+            </div>
         </div>
         <div class="rightbuttons">
             <input type="button" value="next question">
-            <input type="button" value="translate">
+            <input type="button" value="translate" id="translateButton">
             <input type="button" value="show answer">
         </div>
 

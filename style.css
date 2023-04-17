@@ -1,7 +1,8 @@
 .boxcontent {
+    opacity: 0;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 0%;
     height: 400px;
     width: 1000px;
     display: flex;
@@ -9,6 +10,7 @@
     font-family: ABeeZee;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    transition: 1.2s; 
 }
 
 .topPanel {
@@ -21,7 +23,7 @@
     background-color: rgb(169, 240, 176);
     margin-left: auto;
     margin-right: 0;
-    transition: 0.4s;  
+    transition: 0.6s;  
 }
 
 .topPanel:hover
@@ -68,35 +70,60 @@
 }
 
 .rectangle {
+    opacity: 0;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 0%;
     height: 500px;
     width: 1100px;
     margin: 0;
     background-color: rgb(169, 240, 176);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    transition: 0.6s;
 
 }
 
 .rectangleBack {
+    opacity: 0;
     position: absolute;
     top: 50%;
-    left: 45%;
+    left: 0%;
     height: 600px;
     width: 1100px;
     margin: 0;
     background-color: rgb(124, 99, 84);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    transition: 0.4s;
 
+}
+
+.rectangleBack .translation{
+    color: rgb(207, 255, 199);
+    font-family: ABeeZee;
+    font-size: 18px;
+    width: 65%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+   
 }
 
 .boxcontent .textcontent {
 
     width: 65%;
     font-size: 18px;
+}
+
+.boxcontent .textcontent .answer{
+
+    opacity: 0;
+    transition: 0.5s;
+    margin-top: -20px;
 }
 
 .boxcontent .textcontent .tasktext {
@@ -188,9 +215,6 @@
     background-color: rgb(207, 255, 199);
 
 }
-
-
-
 
 .boxcontent .textcontent .sendanswer {
     margin-top: 20px;

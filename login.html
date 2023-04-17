@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginStyle.css">
+    <title>Log In</title>
+    <script src="login.js"></script>
+</head>
+
+<body>
+    <div class="rectangleBack" id="rectangleBack"></div>
+    <div class="rectangle" id="rectangle">
+        <div class="info">
+            <label>Username</label>
+            <input type="text" id="username" name="username">
+            <label>Password</label>
+            <input type="text" id="password" name="password">
+            <input type="button" value="Log In" onclick="
+            var rect = document.getElementById('rectangle'); 
+            var rectBack=document.getElementById('rectangleBack');
+            rect.style.left = '0%';
+            rectBack.style.left = '0%';
+            rect.style.opacity = '0';
+            rectBack.style.opacity = '0';
+            setTimeout((doc) => doc.location.href='index.html', 900, document);">
+            <label id="signuptext">Don't have an account yet? <a href="signup.html">Sign Up</a></label>
+        </div>
+    </div>
+</body>
+
+</html>
